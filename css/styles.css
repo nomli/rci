@@ -387,6 +387,9 @@ h2.title{
   color:#bc0a04;
 }
 /*CATEGORY PAGE*/
+#category_section .btn{
+  margin-bottom:5px;
+}
 .category_section_header{
   max-height: 90px;
 }
