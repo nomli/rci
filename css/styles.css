@@ -286,32 +286,45 @@ h2.title{
 .product_carousel_section .carousel-inner{
   margin-top:5%;
 }
-.product_carousel_section .carousel-indicators{
+.product_carousel_section .nav-tabs{
   background: url("../img/nav_bg.jpg") repeat-x 0 0;
+  border-bottom:0;
   display: block;
   height: 58px;
   margin:0;
   position: static;
+  text-align: center;
   width:100%;
 }
-.product_carousel_section .carousel-indicators li{
+.product_carousel_section .nav-tabs li{
   background-color: transparent;
   border-radius: 0;
   color:#fff;
   display: inline-block;
+  float:none;
   height: auto;
   margin: 0 -2px;
   text-indent: 0;
   width: auto;
   font:italic 20px Impact;
-  padding: 0 20px;
   line-height: 58px;
   position:relative;
 }
-.product_carousel_section .carousel-indicators li.active{
+.product_carousel_section .nav-tabs li.active{
   background-color: #ff7800;
 }
-.product_carousel_section .carousel-indicators li.active:after{
+.product_carousel_section .nav-tabs li>a{
+  background: none !important;
+  border:0 !important;
+  border-radius: 0;
+  color:#fff !important;
+  height: 58px;
+  line-height: 58px;
+  margin:0;
+  outline: none !important;
+  padding: 0 20px;
+}
+.product_carousel_section .nav-tabs li.active:after{
   content:url(../img/activeIndicator.png);
   position: absolute;
   top:32px;
@@ -327,7 +340,7 @@ h2.title{
 }
 .product_carousel_section .carousel-control>span{
   position: absolute;
-  top: 50%;
+  top: 35%;
 }
 /*.product_carousel_section .carousel-control.left{
   left:15%;
@@ -734,7 +747,7 @@ footer .copright{
   .product_carousel_section .prodlist p{
     font-size: 11px;
   }
-  .product_carousel_section .carousel-indicators li{
+  .product_carousel_section .nav-tabs li{
     display: inline-block;
     font-size: 100%;
   }
@@ -838,6 +851,7 @@ footer .copright{
   }
   .product_carousel_section .carousel-control{
     height: 58px;
+    top:45%;
   }
   .product_carousel_section .carousel-control > span.glyphicon-menu-left,
   .product_carousel_section .carousel-control > span.glyphicon-menu-right{
@@ -846,12 +860,9 @@ footer .copright{
     left:0;
     color:#fdba00;
   }
-  .product_carousel_section .carousel-indicators li{
-    display: none;
-    font-size: 100%;
-  }
-  .product_carousel_section .carousel-indicators li.active{
-    display: block;
+  .product_carousel_section .nav-tabs li > a{
+    font-size:14px;
+    padding:0 10px;
   }
   .category_section_header{
     max-height: 50px;
@@ -890,5 +901,34 @@ footer .copright{
   }
   .img-best li>img{
     width:25px;
+  }
+}
+@media (max-width: 320px){
+  .product_carousel_section .nav-tabs{
+    height:auto;
+  }
+  .product_carousel_section .nav-tabs  li{
+    padding:5px 0;
+    vertical-align: middle;
+    width: 33.333333%;
+  }
+  .product_carousel_section .nav-tabs  li:nth-child(2){
+    box-sizing:border-box;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  .product_carousel_section .nav-tabs  li.active:after{
+    display: none;
+  }
+  .product_carousel_section .nav-tabs li.active{
+    background-color: #FF7800 !important
+  }
+  .product_carousel_section .nav-tabs li > a{
+    height: 22px;
+    line-height: 100%;
+    font-size:11px;
+    font-style: normal;
+    font-family: Arial;
+    padding:0;
   }
 }
